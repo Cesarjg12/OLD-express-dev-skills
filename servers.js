@@ -19,8 +19,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+// Localhost:3000/
 app.use('/', indexRouter);
-app.use('/users', skillsRouter);
+//Localhost:3000/todos
+app.use('/skills', skillsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
